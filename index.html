@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            padding: 0.5rem 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Handcrafted Projects</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="container">
+        <h2>About Me</h2>
+        <p>Welcome! I specialize in creating unique handcrafted items, including miniatures and custom furniture. Explore my work and find the perfect piece for your collection or home.</p>
+    </section>
+    <section id="gallery" class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/200" alt="Project 1">
+            <img src="https://via.placeholder.com/200" alt="Project 2">
+            <img src="https://via.placeholder.com/200" alt="Project 3">
+            <img src="https://via.placeholder.com/200" alt="Project 4">
+        </div>
+    </section>
+    <section id="shop" class="container">
+        <h2>Shop</h2>
+        <div class="gallery">
+            <div class="product">
+                <h3>Miniature Chair</h3>
+                <p>$50</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Custom Table</h3>
+                <p>$120</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Follow me on <a href="#">Instagram</a>!</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Handcrafted Projects. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
