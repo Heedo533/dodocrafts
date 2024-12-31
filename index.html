@@ -14,33 +14,43 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             padding: 1rem 2rem;
             align-items: center;
         }
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
         nav a {
-            margin-right: 1.5rem;
             text-decoration: none;
             color: #333;
             font-size: 1rem;
+        }
+        header div {
+            margin-left: 2rem;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
         .intro {
             text-align: center;
             margin-top: 4rem;
             font-size: 1.5rem;
+            max-width: 800px;
+            margin: 4rem auto; /* Center the intro section */
         }
         .gallery {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 2rem;
-            margin: 0; /* Remove margin */
-            width: 100%; /* Ensure the gallery spans the full page width */
+            margin: 0 2rem; /* Add side margins */
+            width: calc(100% - 4rem); /* Account for side margins */
         }
         .gallery-item {
             position: relative;
             cursor: pointer;
-            width: 100%; /* Span full width of the parent container */
+            width: 100%; /* Span full width within the gallery */
         }
         .gallery img {
             width: 100%; /* Make the image fill the width of its container */
