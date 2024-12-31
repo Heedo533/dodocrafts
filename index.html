@@ -34,18 +34,18 @@
             flex-direction: column;
             align-items: center;
             gap: 2rem;
-            margin: 3rem auto;
-            max-width: 600px;
+            margin: 0; /* Remove margin */
+            width: 100%; /* Ensure the gallery spans the full page width */
         }
         .gallery-item {
             position: relative;
             cursor: pointer;
-            width: 100%;
+            width: 100%; /* Span full width of the parent container */
         }
         .gallery img {
-            width: 100%;
-            max-height: 700px;  /* Adjust to your preferred height */
-            object-fit: cover;  /* This crops the image if necessary to fit */
+            width: 100%; /* Make the image fill the width of its container */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Crop the image if necessary */
         }
         .overlay {
             position: absolute;
@@ -75,7 +75,7 @@
 
     <section class="gallery">
         <div class="gallery-item" onclick="location.href='work.html#furniture'">
-        <img src="furniture.jpg" alt="Furniture Design">
+            <img src="furniture.jpg" alt="Furniture Design">
             <div class="overlay">Furniture Design</div>
         </div>
         <div class="gallery-item" onclick="location.href='work.html#product'">
