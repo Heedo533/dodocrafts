@@ -40,14 +40,15 @@
         .intro {
             text-align: center;
             margin-top: 5rem; /* Add margin to accommodate header */
-            font-size: 1.5rem;
-            max-width: 100%; /* Allow the intro text to span full width */
+            max-width: 100%;
             margin: 5rem auto;
         }
         .intro p {
-            font-family: 'Raleway', sans-serif; /* Apply Raleway font */
-            white-space: nowrap; /* Prevent text wrapping */
+            font-family: 'Raleway', sans-serif;
+            white-space: nowrap;
             overflow: hidden;
+            font-size: 2rem; /* Increased font size */
+            font-weight: 700; /* Bold text */
         }
         .gallery {
             display: flex;
@@ -67,10 +68,10 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            transition: 0.3s ease-in-out; /* Smooth transition effect */
+            transition: 0.3s ease-in-out;
         }
         .gallery img:hover {
-            filter: brightness(50%); /* Darken the image on hover */
+            filter: brightness(50%);
         }
         .overlay {
             position: absolute;
@@ -88,9 +89,9 @@
 <body>
     <header>
         <nav>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <div>Heedo Jang</div>
     </header>
