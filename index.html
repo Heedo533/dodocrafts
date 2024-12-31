@@ -3,117 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handcrafted Projects</title>
+    <title>Heedo Jang - Industrial Designer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #fff;
             color: #333;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #444;
-            padding: 0.5rem 0;
-        }
-        nav ul {
             display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            align-items: center;
         }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
+        nav a {
+            margin-right: 1.5rem;
             text-decoration: none;
+            color: #333;
+            font-size: 1rem;
         }
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+        .intro {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 1.5rem;
         }
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 900px;
+        }
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
         }
         .gallery img {
             width: 100%;
             border-radius: 8px;
         }
-        .product {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+        .overlay {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>DodoCrafts</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div>Heedo Jang</div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home" class="container">
-        <h2>About Me</h2>
-        <p>Welcome! I specialize in creating unique handcrafted items, including miniatures and custom furniture. Explore my work and find the perfect piece for your collection or home.</p>
+
+    <section class="intro">
+        <p>Hi, I'm Heedo, an industrial designer. I make little cute furnitures and stuff.</p>
     </section>
-    <section id="gallery" class="container">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/200" alt="Project 1">
-            <img src="https://via.placeholder.com/200" alt="Project 2">
-            <img src="https://via.placeholder.com/200" alt="Project 3">
-            <img src="https://via.placeholder.com/200" alt="Project 4">
+
+    <section class="gallery">
+        <div class="gallery-item" onclick="location.href='work.html#furniture'">
+            <img src="furniture.jpg" alt="Furniture Design">
+            <div class="overlay">Furniture Design</div>
+        </div>
+        <div class="gallery-item" onclick="location.href='work.html#product'">
+            <img src="product.jpg" alt="Product Design">
+            <div class="overlay">Product Design</div>
         </div>
     </section>
-    <section id="shop" class="container">
-        <h2>Shop</h2>
-        <div class="gallery">
-            <div class="product">
-                <h3>Miniature Chair</h3>
-                <p>$50</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <h3>Custom Table</h3>
-                <p>$120</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Follow me on <a href="#">Instagram</a>!</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 My Handcrafted Projects. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
