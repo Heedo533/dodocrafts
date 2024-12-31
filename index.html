@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heedo Jang - Industrial Designer</title>
-    <!-- Import Raleway Font -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -42,9 +41,13 @@
             text-align: center;
             margin-top: 5rem; /* Add margin to accommodate header */
             font-size: 1.5rem;
-            max-width: 800px;
-            margin: 5rem auto; /* Center the intro section */
+            max-width: 100%; /* Allow the intro text to span full width */
+            margin: 5rem auto;
+        }
+        .intro p {
             font-family: 'Raleway', sans-serif; /* Apply Raleway font */
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden;
         }
         .gallery {
             display: flex;
@@ -52,18 +55,22 @@
             align-items: center;
             gap: 2rem;
             margin: 0 auto;
-            width: 70%; /* Reduce width of the gallery for a more centered and narrow layout */
+            width: 70%;
         }
         .gallery-item {
             position: relative;
             cursor: pointer;
-            width: 100%; /* Use the reduced gallery width */
-            height: auto; /* Adjust height automatically to fit images */
+            width: 100%;
+            height: auto;
         }
         .gallery img {
-            width: 100%; /* Make the image fill the width of its container */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the entire image is visible */
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: 0.3s ease-in-out; /* Smooth transition effect */
+        }
+        .gallery img:hover {
+            filter: brightness(50%); /* Darken the image on hover */
         }
         .overlay {
             position: absolute;
@@ -71,7 +78,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 5rem; /* Larger font size */
+            font-size: 3rem;
             text-align: center;
             white-space: nowrap;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
