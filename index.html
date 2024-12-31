@@ -31,14 +31,16 @@
         }
         .gallery {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 2rem;
             margin: 3rem auto;
-            max-width: 900px;
+            max-width: 600px;
         }
         .gallery-item {
             position: relative;
             cursor: pointer;
+            width: 100%;
         }
         .gallery img {
             width: 100%;
@@ -73,11 +75,11 @@
 
     <section class="gallery">
         <div class="gallery-item" onclick="location.href='work.html#furniture'">
-            <img src="furniture.jpg" alt="Furniture Design">
+            <img src="images/furniture.jpg" alt="Furniture Design">
             <div class="overlay">Furniture Design</div>
         </div>
         <div class="gallery-item" onclick="location.href='work.html#product'">
-            <img src="product.jpg" alt="Product Design">
+            <img src="images/product.jpg" alt="Product Design">
             <div class="overlay">Product Design</div>
         </div>
     </section>
