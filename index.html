@@ -34,27 +34,30 @@
         }
         .intro {
             text-align: center;
-            margin-top: 4rem;
+            margin-top: 1rem;
             font-size: 1.5rem;
             max-width: 800px;
-            margin: 4rem auto; /* Center the intro section */
+            margin: 1rem auto; /* Center the intro section */
         }
         .gallery {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2rem;
-            margin: 0 2rem; /* Add side margins */
-            width: calc(100% - 4rem); /* Account for side margins */
+            gap: 0; /* No gap to avoid extra height */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Make gallery fit the entire viewport height */
         }
         .gallery-item {
             position: relative;
             cursor: pointer;
-            width: 100%; /* Span full width within the gallery */
+            width: 100%; /* Span full width */
+            height: 50vh; /* Each image takes up half the viewport height */
+            overflow: hidden; /* Crop overflowing parts of the image */
         }
         .gallery img {
             width: 100%; /* Make the image fill the width of its container */
-            height: auto; /* Maintain aspect ratio */
+            height: 100%; /* Fill the height of the container */
             object-fit: cover; /* Crop the image if necessary */
         }
         .overlay {
@@ -66,6 +69,7 @@
             font-size: 2rem;
             text-align: center;
             white-space: nowrap;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
