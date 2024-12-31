@@ -44,8 +44,8 @@
         }
         .gallery img {
             width: 100%;
-            height: auto;  /* Ensures images scale proportionally */
-            display: block;
+            max-height: 700px;  /* Adjust to your preferred height */
+            object-fit: cover;  /* This crops the image if necessary to fit */
         }
         .overlay {
             position: absolute;
