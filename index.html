@@ -13,6 +13,8 @@
             background-color: #fff;
             color: #333;
         }
+
+        /* Fixed header for better mobile usability */
         header {
             display: flex;
             justify-content: space-between;
@@ -22,62 +24,106 @@
             width: 100%;
             top: 0;
             left: 0;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            box-sizing: border-box;
         }
+
         nav {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
+
         nav a {
             text-decoration: none;
             color: #333;
             font-size: 1rem;
         }
+
+        header div {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive intro section */
         .intro {
             text-align: center;
-            margin-top: 6rem;
-            padding: 2rem;
-            font-size: 1.5rem;
+            margin-top: 6rem; /* Adjusted for the fixed header */
+            padding: 1rem;
         }
+
+        .intro p {
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 0 1rem;
+        }
+
+        /* Responsive gallery */
         .gallery {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem auto;
+            width: 90%;
             max-width: 800px;
-            margin: 0 auto;
         }
+
         .gallery-item {
             position: relative;
+            width: 100%;
+            max-width: 600px;
             cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .gallery img {
             width: 100%;
             height: auto;
-            object-fit: contain;
+            object-fit: cover;
             transition: 0.3s ease-in-out;
         }
+
         .gallery img:hover {
             filter: brightness(50%);
         }
+
         .overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-align: center;
+            white-space: nowrap;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
         }
-        @media (min-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr 1fr;
+
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 0.8rem;
             }
+
+            nav {
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+
+            .intro p {
+                font-size: 1.5rem;
+                padding: 0 1rem;
+            }
+
             .overlay {
-                font-size: 3rem;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -91,11 +137,11 @@
         </nav>
         <div>Heedo Jang</div>
     </header>
-    
+
     <section class="intro">
         <p>Hi, I'm Heedo, an industrial designer. I make little cute furnitures and stuff.</p>
     </section>
-    
+
     <section class="gallery">
         <div class="gallery-item" onclick="location.href='work.html#furniture'">
             <img src="images/furniture.jpg" alt="Furniture Design">
