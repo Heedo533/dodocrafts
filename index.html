@@ -25,16 +25,18 @@
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            flex-wrap: wrap; /* Allow header content to wrap if needed */
+            flex-wrap: nowrap; /* Prevents wrapping */
+            white-space: nowrap; /* Prevents text from breaking into a new line */
         }
         header div {
-            font-size: 1.2rem; /* Ensure text doesn't overflow */
+            font-size: 1.2rem;
+            white-space: nowrap; /* Ensure the name doesn't wrap to next line */
         }
         nav {
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap; /* Allow navigation items to wrap */
-            justify-content: flex-end; /* Keep navigation items at the right */
+            justify-content: flex-end;
         }
         nav a {
             text-decoration: none;
