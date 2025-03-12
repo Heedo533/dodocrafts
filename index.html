@@ -25,18 +25,23 @@
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            flex-wrap: nowrap; /* Prevents wrapping */
-            white-space: nowrap; /* Prevents text from breaking into a new line */
-            overflow: hidden; /* Prevent text from overflowing */
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            overflow: hidden;
         }
         header div {
-            font-size: 1.5rem; /* Increase font size for larger screens */
-            white-space: nowrap; /* Ensures the name stays in one line */
+            font-size: 1.5rem;
+            white-space: nowrap;
+            flex-grow: 1; /* Allow the name to take up available space */
+            text-align: left; /* Align the name to the left */
+            max-width: 80%; /* Limit the width of the text */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Display an ellipsis if text overflows */
         }
         nav {
             display: flex;
             gap: 1.5rem;
-            flex-wrap: wrap; /* Allow navigation items to wrap */
+            flex-wrap: wrap;
             justify-content: flex-end;
         }
         nav a {
@@ -82,7 +87,7 @@
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
             white-space: normal;
             padding: 0.5rem;
-            max-width: 80%; /* Prevents text from spilling out */
+            max-width: 80%;
         }
 
         /* Mobile-specific styles */
@@ -98,7 +103,8 @@
 
             header div {
                 font-size: 1.2rem; /* Slightly smaller text for mobile */
-                white-space: nowrap; /* Ensure name stays in one line */
+                white-space: nowrap;
+                max-width: 70%; /* Allow more space for the text */
             }
 
             .intro {
@@ -107,20 +113,21 @@
             }
 
             .gallery {
-                grid-template-columns: 1fr; /* Keep gallery items stacked vertically on small screens */
+                grid-template-columns: 1fr;
             }
 
             .overlay {
-                font-size: 1rem; /* Smaller overlay text for mobile */
+                font-size: 1rem;
                 padding: 0.3rem;
-                max-width: 90%; /* Ensures text stays within bounds */
+                max-width: 90%;
             }
         }
 
         /* Very small screen adjustments */
         @media (max-width: 480px) {
             header div {
-                font-size: 1rem; /* Even smaller font size on extra small screens */
+                font-size: 1rem; /* Smaller font size on extra small screens */
+                max-width: 60%; /* Allow more space for the name */
             }
         }
     </style>
