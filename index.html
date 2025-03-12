@@ -7,124 +7,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
             color: #333;
         }
-
-        /* Fixed header for better mobile usability */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            position: fixed;
+            position: absolute;
             width: 100%;
             top: 0;
             left: 0;
-            background-color: white;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
             box-sizing: border-box;
         }
-
         nav {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
         }
-
         nav a {
             text-decoration: none;
             color: #333;
             font-size: 1rem;
         }
-
         header div {
             font-weight: bold;
             font-size: 1.2rem;
         }
-
-        /* Responsive intro section */
         .intro {
             text-align: center;
-            margin-top: 6rem; /* Adjusted for the fixed header */
-            padding: 1rem;
+            margin-top: 5rem; /* Add margin to accommodate header */
+            max-width: 100%;
+            margin: 5rem auto;
         }
-
         .intro p {
-            font-size: 2rem;
-            font-weight: 700;
-            padding: 0 1rem;
+            font-family: 'Raleway', sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 2rem; /* Increased font size */
+            font-weight: 700; /* Bold text */
         }
-
-        /* Responsive gallery */
         .gallery {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 2rem;
-            margin: 2rem auto;
-            width: 90%;
-            max-width: 800px;
+            margin: 0 auto;
+            width: 70%;
         }
-
         .gallery-item {
             position: relative;
-            width: 100%;
-            max-width: 600px;
             cursor: pointer;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: auto;
         }
-
         .gallery img {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
             transition: 0.3s ease-in-out;
         }
-
         .gallery img:hover {
             filter: brightness(50%);
         }
-
         .overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 1.8rem;
+            font-size: 5rem;
             text-align: center;
             white-space: nowrap;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-        }
-
-        /* Mobile Responsive Adjustments */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 0.8rem;
-            }
-
-            nav {
-                flex-direction: row;
-                gap: 0.5rem;
-            }
-
-            .intro p {
-                font-size: 1.5rem;
-                padding: 0 1rem;
-            }
-
-            .overlay {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
