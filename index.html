@@ -27,10 +27,11 @@
             z-index: 1000;
             flex-wrap: nowrap; /* Prevents wrapping */
             white-space: nowrap; /* Prevents text from breaking into a new line */
+            overflow: hidden; /* Prevent text from overflowing */
         }
         header div {
-            font-size: 1.2rem;
-            white-space: nowrap; /* Ensure the name doesn't wrap to next line */
+            font-size: 1.5rem; /* Increase font size for larger screens */
+            white-space: nowrap; /* Ensures the name stays in one line */
         }
         nav {
             display: flex;
@@ -79,7 +80,7 @@
             font-size: 1.5rem;
             text-align: center;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-            white-space: normal; /* Allows text to wrap instead of getting cut */
+            white-space: normal;
             padding: 0.5rem;
             max-width: 80%; /* Prevents text from spilling out */
         }
@@ -96,7 +97,8 @@
             }
 
             header div {
-                font-size: 1rem; /* Smaller text for mobile */
+                font-size: 1.2rem; /* Slightly smaller text for mobile */
+                white-space: nowrap; /* Ensure name stays in one line */
             }
 
             .intro {
@@ -112,6 +114,13 @@
                 font-size: 1rem; /* Smaller overlay text for mobile */
                 padding: 0.3rem;
                 max-width: 90%; /* Ensures text stays within bounds */
+            }
+        }
+
+        /* Very small screen adjustments */
+        @media (max-width: 480px) {
+            header div {
+                font-size: 1rem; /* Even smaller font size on extra small screens */
             }
         }
     </style>
