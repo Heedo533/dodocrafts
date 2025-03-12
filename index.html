@@ -25,10 +25,16 @@
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            flex-wrap: wrap; /* Allow header content to wrap if needed */
+        }
+        header div {
+            font-size: 1.2rem; /* Ensure text doesn't overflow */
         }
         nav {
             display: flex;
             gap: 1.5rem;
+            flex-wrap: wrap; /* Allow navigation items to wrap */
+            justify-content: flex-end; /* Keep navigation items at the right */
         }
         nav a {
             text-decoration: none;
@@ -78,13 +84,28 @@
 
         /* Mobile-specific styles */
         @media (max-width: 768px) {
+            header {
+                padding: 1rem; /* Adjust padding for mobile */
+            }
+
+            nav {
+                justify-content: center; /* Center nav items on smaller screens */
+                gap: 1rem; /* Reduce gap between navigation items */
+            }
+
+            header div {
+                font-size: 1rem; /* Smaller text for mobile */
+            }
+
             .intro {
                 font-size: 1rem; /* Smaller text for mobile */
                 padding: 1rem;
             }
+
             .gallery {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Keep gallery items stacked vertically on small screens */
             }
+
             .overlay {
                 font-size: 1rem; /* Smaller overlay text for mobile */
                 padding: 0.3rem;
