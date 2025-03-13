@@ -26,23 +26,20 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             flex-wrap: nowrap;
-            white-space: nowrap;
-            overflow: hidden;
         }
-        header div {
+        .header-name {
             font-size: 1.5rem;
+            flex-grow: 1;  /* Allows name to take available space */
             white-space: nowrap;
-            flex-grow: 1; /* Allow the name to take up available space */
-            text-align: left; /* Align the name to the left */
-            max-width: 80%; /* Limit the width of the text */
             overflow: hidden;
-            text-overflow: ellipsis; /* Display an ellipsis if text overflows */
+            text-overflow: ellipsis;
+            text-align: right; /* Align the name to the right */
+            padding-right: 1rem; /* Adds spacing from the edge */
         }
         nav {
             display: flex;
             gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: flex-end;
+            flex-wrap: nowrap;
         }
         nav a {
             text-decoration: none;
@@ -101,10 +98,9 @@
                 gap: 1rem; /* Reduce gap between navigation items */
             }
 
-            header div {
+            .header-name {
                 font-size: 1.2rem; /* Slightly smaller text for mobile */
-                white-space: nowrap;
-                max-width: 70%; /* Allow more space for the text */
+                max-width: 70%; /* Prevents excessive shrinkage */
             }
 
             .intro {
@@ -125,7 +121,7 @@
 
         /* Very small screen adjustments */
         @media (max-width: 480px) {
-            header div {
+            .header-name {
                 font-size: 1rem; /* Smaller font size on extra small screens */
                 max-width: 60%; /* Allow more space for the name */
             }
@@ -134,12 +130,12 @@
 </head>
 <body>
     <header>
+        <div class="header-name">Heedo Jang</div>
         <nav>
             <a href="about.html">About</a>
             <a href="work.html">Work</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <div>Heedo Jang</div>
     </header>
     
     <section class="intro">
