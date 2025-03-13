@@ -12,9 +12,9 @@
             padding: 0;
             background-color: #fff;
             color: #333;
-            font-size: 1.2rem; /* Default font size for laptop */
         }
-
+        
+        /* Header Styles */
         header {
             display: flex;
             justify-content: space-between;
@@ -29,33 +29,36 @@
             z-index: 1000;
         }
 
+        /* Navigation on Left */
         nav {
             display: flex;
             gap: 1.5rem;
-            flex-grow: 1; /* Pushes Heedo Jang to the right */
+            flex-wrap: wrap;
+            justify-content: flex-start;
         }
-
         nav a {
             text-decoration: none;
             color: #333;
-            font-size: 1.2rem; /* Increased for better readability */
+            font-size: 1rem;
         }
 
+        /* Heedo Jang on Right */
         .header-name {
-            font-size: 1.8rem; /* Larger for desktop */
+            font-size: 1.8rem;
             white-space: nowrap;
-            overflow: visible; /* Prevents text cutoff */
-            text-overflow: clip;
+            overflow: visible; /* Ensures text doesn't cut off */
             text-align: right;
             padding-right: 2rem;
-            max-width: unset; /* Allows full display */
+            max-width: unset;
+            position: relative;
         }
 
+        /* Content Styles */
         .intro {
             text-align: center;
             margin-top: 6rem;
             padding: 2rem;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .gallery {
@@ -99,30 +102,21 @@
 
         /* Mobile-specific styles */
         @media (max-width: 768px) {
-            body {
-                font-size: 1rem; /* Smaller font for mobile */
-            }
-
             header {
-                padding: 1rem; /* Adjust padding for mobile */
+                padding: 1rem;
             }
 
             nav {
-                justify-content: flex-start; /* Keep nav items aligned to the left */
-                gap: 1rem; /* Reduce gap between navigation items */
-            }
-
-            nav a {
-                font-size: 1rem; /* Smaller font for mobile */
+                gap: 1rem;
             }
 
             .header-name {
-                font-size: 1.4rem; /* Shrinks for smaller screens */
-                padding-right: 1rem;
+                font-size: 1.4rem; /* Smaller text on mobile */
+                padding-right: 1.5rem; /* More space for visibility */
             }
 
             .intro {
-                font-size: 1.2rem; /* Adjust for better mobile readability */
+                font-size: 1rem;
                 padding: 1rem;
             }
 
@@ -141,7 +135,7 @@
         @media (max-width: 480px) {
             .header-name {
                 font-size: 1.2rem;
-                padding-right: 0.5rem;
+                padding-right: 1.2rem;
             }
         }
     </style>
