@@ -15,7 +15,7 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Ensures nav is on the left, name is on the right */
             align-items: center;
             padding: 1rem 2rem;
             position: fixed;
@@ -29,7 +29,6 @@
         nav {
             display: flex;
             gap: 1.5rem;
-            flex-wrap: nowrap;
         }
         nav a {
             text-decoration: none;
@@ -41,8 +40,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin-left: auto; /* Pushes it to the right */
-            text-align: right;
+            text-align: right; /* Align text to the right */
         }
         .intro {
             text-align: center;
@@ -88,27 +86,21 @@
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             header {
-                padding: 1rem; /* Adjust padding for mobile */
-            }
-
-            nav {
-                justify-content: center; /* Center nav items on smaller screens */
-                gap: 1rem; /* Reduce gap between navigation items */
-            }
-
-            .header-name {
-                font-size: 1.2rem; /* Slightly smaller text for mobile */
-            }
-
-            .intro {
-                font-size: 1rem; /* Smaller text for mobile */
                 padding: 1rem;
             }
-
+            nav {
+                gap: 1rem;
+            }
+            .header-name {
+                font-size: 1.2rem;
+            }
+            .intro {
+                font-size: 1rem;
+                padding: 1rem;
+            }
             .gallery {
                 grid-template-columns: 1fr;
             }
-
             .overlay {
                 font-size: 1rem;
                 padding: 0.3rem;
@@ -119,7 +111,7 @@
         /* Very small screen adjustments */
         @media (max-width: 480px) {
             .header-name {
-                font-size: 1rem; /* Smaller font size on extra small screens */
+                font-size: 1rem;
             }
         }
     </style>
