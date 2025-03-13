@@ -12,7 +12,9 @@
             padding: 0;
             background-color: #fff;
             color: #333;
+            font-size: 1.2rem; /* Default font size for laptop */
         }
+
         header {
             display: flex;
             justify-content: space-between;
@@ -26,30 +28,36 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
+
         nav {
             display: flex;
             gap: 1.5rem;
+            flex-grow: 1; /* Pushes Heedo Jang to the right */
         }
+
         nav a {
             text-decoration: none;
             color: #333;
-            font-size: 1rem;
+            font-size: 1.2rem; /* Increased for better readability */
         }
+
         .header-name {
-            font-size: 1.5rem;
+            font-size: 1.8rem; /* Larger for desktop */
             white-space: nowrap;
-            overflow: visible; /* Prevents cutting off */
-            text-overflow: clip; /* Ensures full text is shown */
+            overflow: visible; /* Prevents text cutoff */
+            text-overflow: clip;
             text-align: right;
-            padding-right: 2rem; /* Adds space between text and screen edge */
-            max-width: none; /* Prevents unnecessary width limits */
+            padding-right: 2rem;
+            max-width: unset; /* Allows full display */
         }
+
         .intro {
             text-align: center;
             margin-top: 6rem;
             padding: 2rem;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
+
         .gallery {
             display: grid;
             grid-template-columns: 1fr;
@@ -58,19 +66,23 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
         .gallery-item {
             position: relative;
             cursor: pointer;
         }
+
         .gallery img {
             width: 100%;
             height: auto;
             object-fit: contain;
             transition: 0.3s ease-in-out;
         }
+
         .gallery img:hover {
             filter: brightness(50%);
         }
+
         .overlay {
             position: absolute;
             top: 50%;
@@ -87,23 +99,37 @@
 
         /* Mobile-specific styles */
         @media (max-width: 768px) {
+            body {
+                font-size: 1rem; /* Smaller font for mobile */
+            }
+
             header {
-                padding: 1rem;
+                padding: 1rem; /* Adjust padding for mobile */
             }
+
             nav {
-                gap: 1rem;
+                justify-content: flex-start; /* Keep nav items aligned to the left */
+                gap: 1rem; /* Reduce gap between navigation items */
             }
+
+            nav a {
+                font-size: 1rem; /* Smaller font for mobile */
+            }
+
             .header-name {
-                font-size: 1.2rem;
-                padding-right: 1rem; /* Adjust for small screens */
+                font-size: 1.4rem; /* Shrinks for smaller screens */
+                padding-right: 1rem;
             }
+
             .intro {
-                font-size: 1rem;
+                font-size: 1.2rem; /* Adjust for better mobile readability */
                 padding: 1rem;
             }
+
             .gallery {
                 grid-template-columns: 1fr;
             }
+
             .overlay {
                 font-size: 1rem;
                 padding: 0.3rem;
@@ -114,8 +140,8 @@
         /* Very small screen adjustments */
         @media (max-width: 480px) {
             .header-name {
-                font-size: 1rem;
-                padding-right: 0.5rem; /* Adjust to prevent cut-off */
+                font-size: 1.2rem;
+                padding-right: 0.5rem;
             }
         }
     </style>
