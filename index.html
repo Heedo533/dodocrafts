@@ -25,16 +25,6 @@
             background: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            flex-wrap: nowrap;
-        }
-        .header-name {
-            font-size: 1.5rem;
-            flex-grow: 1;  /* Allows name to take available space */
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-align: right; /* Align the name to the right */
-            padding-right: 1rem; /* Adds spacing from the edge */
         }
         nav {
             display: flex;
@@ -45,6 +35,14 @@
             text-decoration: none;
             color: #333;
             font-size: 1rem;
+        }
+        .header-name {
+            font-size: 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: auto; /* Pushes it to the right */
+            text-align: right;
         }
         .intro {
             text-align: center;
@@ -100,7 +98,6 @@
 
             .header-name {
                 font-size: 1.2rem; /* Slightly smaller text for mobile */
-                max-width: 70%; /* Prevents excessive shrinkage */
             }
 
             .intro {
@@ -123,19 +120,18 @@
         @media (max-width: 480px) {
             .header-name {
                 font-size: 1rem; /* Smaller font size on extra small screens */
-                max-width: 60%; /* Allow more space for the name */
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-name">Heedo Jang</div>
         <nav>
             <a href="about.html">About</a>
             <a href="work.html">Work</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <div class="header-name">Heedo Jang</div>
     </header>
     
     <section class="intro">
